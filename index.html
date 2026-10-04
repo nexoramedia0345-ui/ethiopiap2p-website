@@ -1,13 +1,13 @@
-[10/4/2026 6:59 AM] Ashenafi Kusse: <!DOCTYPE html>
+[10/4/2026 8:03 AM] Ashenafi Kusse: <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Student Ethiopia | Education & Student Resources</title>
+    <title>Student Ethiopia | Education & Opportunities</title>
 
     <meta name="description"
-          content="Student Ethiopia - Scholarships, university admissions, study materials, exam information, announcements and student support.">
+          content="Student Ethiopia - Scholarships, university admissions, study materials, exam information, education news and student opportunities.">
 
     <style>
         * {
@@ -20,21 +20,42 @@
             scroll-behavior: smooth;
         }
 
+        :root {
+            --primary: #087f5b;
+            --primary-dark: #056044;
+            --secondary: #12b886;
+            --telegram: #229ed9;
+            --dark: #102a23;
+            --text: #26352f;
+            --muted: #6b7772;
+            --light: #f4f8f6;
+            --white: #ffffff;
+            --border: #e1ebe6;
+            --shadow: 0 10px 35px rgba(16, 42, 35, 0.08);
+        }
+
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #f5f7f6;
-            color: #222;
+            background: var(--light);
+            color: var(--text);
             line-height: 1.6;
         }
 
-        /* HEADER */
+        a {
+            text-decoration: none;
+        }
+
+        /* =========================
+           HEADER
+        ========================== */
+
         header {
-            background: #087f5b;
-            color: white;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+            background: rgba(255,255,255,0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
         }
 
         .navbar {
@@ -47,191 +68,429 @@
         }
 
         .logo {
-            font-size: 24px;
-            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--dark);
+            font-size: 23px;
+            font-weight: 800;
+        }
+
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            font-size: 22px;
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            gap: 20px;
+            align-items: center;
+            gap: 25px;
         }
 
         nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
+            color: #41514b;
+            font-size: 15px;
+            font-weight: 700;
             transition: 0.3s;
         }
 
         nav a:hover {
-            color: #d8f3dc;
+            color: var(--primary);
         }
 
-        /* HERO */
-        .hero {
-            background: linear-gradient(
-                135deg,
-                #087f5b,
-                #12b886
-            );
+        .nav-telegram {
+            background: var(--telegram);
+            color: white !important;
+            padding: 9px 16px;
+            border-radius: 9px;
+        }
 
+        .menu-btn {
+            display: none;
+            border: none;
+            background: var(--primary);
             color: white;
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 15% 20%, rgba(255,255,255,0.12), transparent 25%),
+                radial-gradient(circle at 85% 80%, rgba(255,255,255,0.10), transparent 25%),
+                linear-gradient(135deg, #056044, #087f5b 50%, #12b886);
+            color: white;
+            padding: 105px 20px 95px;
+        }
+
+        .hero-content {
+            max-width: 1050px;
+            margin: auto;
             text-align: center;
-            padding: 90px 20px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.25);
+            padding: 8px 16px;
+            border-radius: 30px;
+            margin-bottom: 22px;
+            font-size: 14px;
+            font-weight: bold;
         }
 
         .hero h1 {
-            font-size: 48px;
-            margin-bottom: 15px;
+            font-size: clamp(38px, 6vw, 68px);
+            line-height: 1.1;
+            margin-bottom: 22px;
+            letter-spacing: -1.5px;
+        }
+
+        .hero h1 span {
+            color: #d9fff0;
         }
 
         .hero p {
-            font-size: 20px;
-            max-width: 750px;
+            max-width: 780px;
             margin: auto;
+            font-size: 19px;
+            color: rgba(255,255,255,0.9);
         }
 
         .hero-buttons {
-            margin-top: 30px;
+            margin-top: 34px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         .btn {
-            display: inline-block;
-            padding: 13px 25px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 5px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 23px;
+            border-radius: 10px;
+            font-weight: 800;
             transition: 0.3s;
         }
 
         .btn-primary {
             background: white;
-            color: #087f5b;
+            color: var(--primary);
         }
 
         .btn-primary:hover {
-            background: #e9f5ef;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
         }
 
         .btn-telegram {
-            background: #229ed9;
+            background: var(--telegram);
             color: white;
         }
 
         .btn-telegram:hover {
             background: #168ac2;
+            transform: translateY(-3px);
         }
 
-        /* GENERAL */
+        /* =========================
+           STATS
+        ========================== */
+
+        .stats {
+            max-width: 1050px;
+            margin: -45px auto 0;
+            position: relative;
+            z-index: 5;
+            padding: 0 20px;
+        }
+
+        .stats-grid {
+            background: white;
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            overflow: hidden;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 25px 15px;
+            border-right: 1px solid var(--border);
+        }
+
+        .stat:last-child {
+            border-right: none;
+        }
+
+        .stat strong {
+            display: block;
+            color: var(--primary);
+            font-size: 27px;
+        }
+
+        .stat span {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* =========================
+           GENERAL
+        ========================== */
+
         .container {
             max-width: 1200px;
             margin: auto;
-            padding: 60px 20px;
+            padding: 80px 20px;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 40px;
+            max-width: 700px;
+            margin: 0 auto 45px;
+        }
+
+        .section-label {
+            color: var(--primary);
+            font-size: 13px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
         }
 
         .section-title h2 {
-            font-size: 34px;
-            color: #087f5b;
+            font-size: clamp(29px, 4vw, 40px);
+            color: var(--dark);
             margin-bottom: 10px;
         }
 
         .section-title p {
-            color: #666;
+            color: var(--muted);
         }
 
-        /* RESOURCE CARDS */
+        /* =========================
+           RESOURCE CARDS
+        ========================== */
+
         .cards {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+            gap: 22px;
         }
 
         .card {
+            position: relative;
             background: white;
             padding: 30px 25px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            text-align: center;
+            border-radius: 18px;
+            border: 1px solid var(--border);
+            box-shadow: 0 5px 20px rgba(16,42,35,0.04);
+            transition: 0.3s;
+            overflow: hidden;
+        }
+
+        .card::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transform: scaleX(0);
+            transform-origin: left;
             transition: 0.3s;
         }
 
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+            transform: translateY(-7px);
+            box-shadow: var(--shadow);
+        }
+[10/4/2026 8:03 AM] Ashenafi Kusse: .card:hover::after {
+            transform: scaleX(1);
         }
 
-        .card .icon {
-            font-size: 45px;
-            margin-bottom: 15px;
+        .icon {
+            width: 58px;
+            height: 58px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            background: #e8f7f1;
+            font-size: 29px;
+            margin-bottom: 18px;
         }
 
         .card h3 {
-            color: #087f5b;
-            margin-bottom: 10px;
+            color: var(--dark);
+            margin-bottom: 9px;
+            font-size: 19px;
         }
 
         .card p {
-            color: #666;
+            color: var(--muted);
+            font-size: 14px;
         }
 
-        /* EXAM SECTION */
-        .exam-section {
-            background: #e9f7f1;
+        .card-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--primary);
+            font-size: 14px;
+            font-weight: bold;
         }
 
-        .exam-box {
-            max-width: 900px;
-            margin: auto;
+        /* =========================
+           LATEST UPDATES
+        ========================== */
+
+        .updates-section {
             background: white;
-            padding: 35px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
         }
 
-        .exam-box h3 {
-            color: #087f5b;
+        .updates {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 25px;
+        }
+
+        .featured-update,
+        .update-list {
+            background: var(--light);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 30px;
+        }
+
+        .featured-update .update-icon {
+            font-size: 42px;
             margin-bottom: 15px;
         }
 
-        .exam-box ul {
-            padding-left: 25px;
+        .featured-update h3 {
+            font-size: 25px;
+            color: var(--dark);
+            margin-bottom: 12px;
         }
 
-        .exam-box li {
-            margin: 8px 0;
+        .featured-update p {
+            color: var(--muted);
         }
 
-        /* REQUIREMENTS */
+        .update-item {
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .update-item:last-child {
+            border-bottom: none;
+        }
+
+        .update-item span {
+            color: var(--primary);
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .update-item h4 {
+            margin-top: 4px;
+            color: var(--dark);
+        }
+
+        /* =========================
+           EXAMS
+        ========================== */
+
+        .exam-section {
+            background: #edf8f4;
+        }
+
+        .exam-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .exam-card {
+            background: white;
+            border-radius: 16px;
+            padding: 25px 20px;
+            text-align: center;
+            border: 1px solid var(--border);
+            transition: 0.3s;
+        }
+
+        .exam-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .exam-card .exam-icon {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        .exam-card h3 {
+            color: var(--primary);
+            margin-bottom: 6px;
+        }
+
+        .exam-card p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* =========================
+           REQUIREMENTS FORM
+        ========================== */
+
         .requirements-section {
-            background: #ffffff;
+            background: white;
         }
 
         .form-container {
             max-width: 850px;
             margin: auto;
-            background: #f8faf9;
-            padding: 35px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            background: var(--light);
+            padding: 38px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
         }
 
         .form-container h3 {
             text-align: center;
-            color: #087f5b;
+            color: var(--dark);
             font-size: 27px;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
-        .form-container .intro {
+        .intro {
             text-align: center;
-            color: #666;
+            color: var(--muted);
             margin-bottom: 30px;
         }
 
@@ -243,25 +502,29 @@
             display: block;
             font-weight: bold;
             margin-bottom: 7px;
-            color: #333;
+            color: var(--dark);
+            font-size: 14px;
         }
 
         .form-group input,
         .form-group select,
         .form-group textarea {
             width: 100%;
-            padding: 13px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-size: 16px;
+            padding: 14px;
+            border: 1px solid #d2ddd8;
+            border-radius: 10px;
+            font-size: 15px;
             font-family: inherit;
             outline: none;
+            background: white;
+            transition: 0.3s;
         }
 
         .form-group input:focus,
         .form-group select:focus,
         .form-group textarea:focus {
-            border-color: #087f5b;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(8,127,91,0.1);
         }
 
         .form-group textarea {
@@ -272,160 +535,305 @@
         .submit-btn {
             width: 100%;
             border: none;
-            background: #087f5b;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
             padding: 15px;
-            font-size: 17px;
+            font-size: 16px;
             font-weight: bold;
-            border-radius: 8px;
+            border-radius: 10px;
             cursor: pointer;
             transition: 0.3s;
         }
 
         .submit-btn:hover {
-            background: #066b4c;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(8,127,91,0.2);
         }
 
-        /* AI */
+        /* =========================
+           AI SECTION
+        ========================== */
+
         .ai-section {
-            background: #f0fdf8;
+            background: linear-gradient(135deg, #102a23, #174d3c);
+            color: white;
         }
 
         .ai-box {
             max-width: 850px;
             margin: auto;
             text-align: center;
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            padding: 20px;
         }
 
-        .ai-box .ai-icon {
-            font-size: 55px;
-            margin-bottom: 15px;
+        .ai-icon {
+            width: 75px;
+            height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 22px;
+            font-size: 38px;
         }
 
         .ai-box h2 {
-            color: #087f5b;
-            margin-bottom: 10px;
+            font-size: 34px;
+            margin-bottom: 12px;
+        }
+
+        .ai-box p {
+            max-width: 700px;
+            margin: auto;
+            color: rgba(255,255,255,0.75);
         }
 
         .coming-soon {
             display: inline-block;
-            margin-top: 20px;
-            background: #087f5b;
+            margin-top: 25px;
+            background: var(--secondary);
             color: white;
             padding: 10px 20px;
-            border-radius: 20px;
+            border-radius: 25px;
             font-weight: bold;
         }
 
-        /* TELEGRAM */
+        /* =========================
+           TELEGRAM
+        ========================== */
+
         .telegram-section {
-            background: #229ed9;
+            background: linear-gradient(135deg, #229ed9, #168ac2);
             color: white;
             text-align: center;
         }
 
         .telegram-section h2 {
-            font-size: 32px;
-            margin-bottom: 10px;
+            font-size: 34px;
+            margin-bottom: 12px;
         }
 
         .telegram-section p {
             max-width: 700px;
             margin: auto auto 25px;
+            color: rgba(255,255,255,0.9);
         }
 
-        /* SUPPORT */
+        /* =========================
+           SUPPORT
+        ========================== */
+
         .support-box {
             text-align: center;
-            background: white;
             max-width: 800px;
             margin: auto;
-            padding: 35px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
         }
 
         .support-box h2 {
-            color: #087f5b;
+            color: var(--dark);
             margin-bottom: 15px;
         }
 
         .support-box p {
-            margin: 8px 0;
+            margin: 9px 0;
+            color: var(--muted);
         }
 
         .support-box a {
-            color: #087f5b;
+            color: var(--primary);
             font-weight: bold;
-            text-decoration: none;
         }
 
-        /* FOOTER */
+        /* =========================
+           FOOTER
+        ========================== */
+
         footer {
-            background: #12372a;
+            background: #0b211a;
             color: white;
+            padding: 45px 20px 25px;
+        }
+
+        .footer-content {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 35px;
+        }
+
+        .footer-brand h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+[10/4/2026 8:03 AM] Ashenafi Kusse: .footer-brand p,
+        .footer-links a {
+            color: rgba(255,255,255,0.65);
+            font-size: 14px;
+        }
+
+        .footer-links h4 {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            display: block;
+            margin: 7px 0;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .copyright {
+            max-width: 1100px;
+            margin: 35px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.12);
             text-align: center;
-            padding: 30px 20px;
-        }
-[10/4/2026 6:59 AM] Ashenafi Kusse: footer p {
-            margin: 5px 0;
+            color: rgba(255,255,255,0.55);
+            font-size: 13px;
         }
 
-        /* MOBILE */
-        @media (max-width: 850px) {
+        /* =========================
+           MOBILE
+        ========================== */
 
-            .navbar {
-                flex-direction: column;
-                gap: 12px;
+        @media (max-width: 900px) {
+
+            .menu-btn {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                width: 100%;
+                background: white;
+                border-bottom: 1px solid var(--border);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            }
+
+            nav.active {
+                display: block;
             }
 
             nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 12px;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                padding: 10px 20px 20px;
             }
 
-            .hero h1 {
-                font-size: 36px;
+            nav li {
+                border-bottom: 1px solid var(--border);
             }
 
-            .hero p {
-                font-size: 17px;
+            nav a {
+                display: block;
+                padding: 13px 5px;
+            }
+
+            .nav-telegram {
+                text-align: center;
+                margin-top: 5px;
             }
 
             .cards {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .exam-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .updates {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
                 grid-template-columns: 1fr 1fr;
             }
         }
 
         @media (max-width: 600px) {
 
+            .navbar {
+                padding: 12px 15px;
+            }
+
+            .logo {
+                font-size: 19px;
+            }
+
+            .logo-icon {
+                width: 38px;
+                height: 38px;
+            }
+
+            .hero {
+                padding: 75px 15px 80px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .stat {
+                border-right: none;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .stat:nth-child(odd) {
+                border-right: 1px solid var(--border);
+            }
+
+            .stat:nth-child(3),
+            .stat:nth-child(4) {
+                border-bottom: none;
+            }
+
+            .container {
+                padding: 60px 15px;
+            }
+
             .cards {
                 grid-template-columns: 1fr;
             }
 
-            .hero {
-                padding: 65px 15px;
-            }
-
-            .hero h1 {
-                font-size: 30px;
-            }
-
-            .container {
-                padding: 45px 15px;
+            .exam-grid {
+                grid-template-columns: 1fr 1fr;
             }
 
             .form-container {
                 padding: 25px 18px;
             }
 
-            .section-title h2 {
-                font-size: 28px;
+            .featured-update,
+            .update-list {
+                padding: 22px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .telegram-section h2 {
+                font-size: 27px;
             }
         }
     </style>
@@ -433,21 +841,37 @@
 
 <body>
 
-<!-- HEADER -->
+<!-- =========================
+     HEADER
+========================== -->
+
 <header>
     <div class="navbar">
 
-        <div class="logo">
-            🎓 Student Ethiopia
-        </div>
+        <a href="#home" class="logo">
+            <span class="logo-icon">🎓</span>
+            <span>Student Ethiopia</span>
+        </a>
 
-        <nav>
+        <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">
+            ☰
+        </button>
+
+        <nav id="mainNav">
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#resources">Resources</a></li>
+                <li><a href="#updates">Updates</a></li>
                 <li><a href="#exams">Exams</a></li>
                 <li><a href="#requirements">Requirements</a></li>
                 <li><a href="#support">Support</a></li>
+                <li>
+                    <a class="nav-telegram"
+                       href="https://t.me/ministry2"
+                       target="_blank">
+                        📲 Telegram
+                    </a>
+                </li>
             </ul>
         </nav>
 
@@ -455,47 +879,96 @@
 </header>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================== -->
+
 <section class="hero" id="home">
 
-    <h1>🎓 Student Ethiopia</h1>
+    <div class="hero-content">
 
-    <p>
-        Your educational platform for scholarships,
-        university admissions, study materials,
-        exam information and student opportunities.
-    </p>
+        <div class="hero-badge">
+            🇪🇹 Education Platform for Ethiopian Students
+        </div>
 
-    <div class="hero-buttons">
+        <h1>
+            Your Future Starts<br>
+            <span>With Knowledge.</span>
+        </h1>
 
-        <a
-            href="#resources"
-            class="btn btn-primary">
-            Explore Resources
-        </a>
+        <p>
+            Discover scholarships, university admissions,
+            study materials, examination information,
+            educational news and student opportunities.
+        </p>
 
-        <a
-            href="https://t.me/ministry2"
-            target="_blank"
-            class="btn btn-telegram">
-            📲 Join Telegram
-        </a>
+        <div class="hero-buttons">
+
+            <a href="#resources" class="btn btn-primary">
+                📚 Explore Resources
+            </a>
+
+            <a href="https://t.me/ministry2"
+               target="_blank"
+               class="btn btn-telegram">
+                📲 Join Telegram
+            </a>
+
+        </div>
 
     </div>
 
 </section>
 
 
-<!-- RESOURCES -->
+<!-- =========================
+     STATS
+========================== -->
+
+<section class="stats">
+
+    <div class="stats-grid">
+
+        <div class="stat">
+            <strong>📚</strong>
+            <span>Study Resources</span>
+        </div>
+
+        <div class="stat">
+            <strong>📝</strong>
+            <span>Exam Updates</span>
+        </div>
+
+        <div class="stat">
+            <strong>🎓</strong>
+            <span>University Info</span>
+        </div>
+
+        <div class="stat">
+            <strong>🇪🇹</strong>
+            <span>For Ethiopian Students</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     RESOURCES
+========================== -->
+
 <section class="container" id="resources">
 
     <div class="section-title">
 
-        <h2>📚 Student Resources</h2>
+        <div class="section-label">Student Resources</div>
+
+        <h2>Everything Students Need</h2>
 
         <p>
             Useful educational information and resources
-            for Ethiopian students.
+            designed to help Ethiopian students move forward.
         </p>
 
     </div>
@@ -504,85 +977,145 @@
     <div class="cards">
 
         <div class="card">
-
             <div class="icon">🎓</div>
-
             <h3>Scholarships</h3>
-
             <p>
-                Find scholarship opportunities
-                and educational funding information.
+                Discover scholarship opportunities,
+                funding information and educational support.
             </p>
-
+            <a href="#support" class="card-link">Learn More →</a>
         </div>
 
 
         <div class="card">
-
             <div class="icon">🏫</div>
-
             <h3>University Admissions</h3>
-
             <p>
-                Get information about university
-                admissions and registration.
+                Find useful information about university
+                admissions, applications and registration.
             </p>
-
+            <a href="#updates" class="card-link">View Updates →</a>
         </div>
 
 
         <div class="card">
-
             <div class="icon">📖</div>
-
             <h3>Study Materials</h3>
-
             <p>
-                Access learning materials,
-                guides and educational resources.
+                Access learning materials, guides and
+                resources to support your studies.
             </p>
-
+            <a href="#resources" class="card-link">Explore →</a>
         </div>
 
 
         <div class="card">
-
             <div class="icon">📝</div>
-
             <h3>Exam Information</h3>
-
             <p>
-                Get updates about national exams,
-                results and important announcements.
+                Stay informed about examinations,
+                registration, schedules and results.
             </p>
-
+            <a href="#exams" class="card-link">View Exams →</a>
         </div>
-
-
-        <div class="card">
-
+[10/4/2026 8:03 AM] Ashenafi Kusse: <div class="card">
             <div class="icon">📢</div>
-
             <h3>Announcements</h3>
+            <p>
+                Get important educational announcements
+                and student-related information.
+            </p>
+            <a href="#updates" class="card-link">Latest News →</a>
+        </div>
+
+
+        <div class="card">
+            <div class="icon">💡</div>
+            <h3>Learning Tips</h3>
+            <p>
+                Improve your study habits with useful
+                learning techniques and practical tips.
+            </p>
+            <a href="#support" class="card-link">Get Help →</a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LATEST UPDATES
+========================== -->
+
+<section class="updates-section" id="updates">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="section-label">Stay Informed</div>
+
+            <h2>Latest Education Updates</h2>
 
             <p>
-                Stay updated with important
-                educational announcements.
+                Important information for Ethiopian students
+                in one place.
             </p>
 
         </div>
 
 
-        <div class="card">
+        <div class="updates">
 
-            <div class="icon">💡</div>
+            <div class="featured-update">
 
-            <h3>Learning Tips</h3>
+                <div class="update-icon">📢</div>
 
-            <p>
-                Discover useful study techniques
-                and learning strategies.
-            </p>
+                <h3>Education News & Announcements</h3>
+
+                <p>
+                    Follow Student Ethiopia for important
+                    announcements about examinations,
+                    university admissions, scholarships,
+                    registration deadlines and other
+                    student opportunities.
+                </p>
+
+                <br>
+
+                <a href="https://t.me/ministry2"
+                   target="_blank"
+                   class="btn btn-telegram">
+                    📲 Get Updates on Telegram
+                </a>
+
+            </div>
+
+
+            <div class="update-list">
+
+                <div class="update-item">
+                    <span>EDUCATION</span>
+                    <h4>University Admission Updates</h4>
+                </div>
+
+                <div class="update-item">
+                    <span>EXAM</span>
+                    <h4>National Examination Information</h4>
+                </div>
+
+                <div class="update-item">
+                    <span>SCHOLARSHIP</span>
+                    <h4>Scholarship Opportunities</h4>
+                </div>
+
+                <div class="update-item">
+                    <span>ANNOUNCEMENT</span>
+                    <h4>Important Student Announcements</h4>
+                </div>
+
+            </div>
 
         </div>
 
@@ -591,43 +1124,53 @@
 </section>
 
 
-<!-- EXAM INFORMATION -->
+<!-- =========================
+     EXAMS
+========================== -->
+
 <section class="exam-section" id="exams">
 
     <div class="container">
 
         <div class="section-title">
 
-            <h2>📝 Exam Information</h2>
+            <div class="section-label">Examinations</div>
+
+            <h2>Exam Information</h2>
 
             <p>
-                Important examination information
-                for students.
+                Find important examination information,
+                schedules, registration and results updates.
             </p>
 
         </div>
 
 
-        <div class="exam-box">
+        <div class="exam-grid">
 
-            <h3>📌 Stay Updated</h3>
+            <div class="exam-card">
+                <div class="exam-icon">📘</div>
+                <h3>Grade 8</h3>
+                <p>Exam information and results updates.</p>
+            </div>
 
-            <p>
-                Students can find important information
-                about national examinations, registration,
-                examination schedules, results and other
-                educational updates.
-            </p>
+            <div class="exam-card">
+                <div class="exam-icon">📕</div>
+                <h3>Grade 12</h3>
+                <p>National examination information.</p>
+            </div>
 
-            <br>
+            <div class="exam-card">
+                <div class="exam-icon">🎯</div>
+                <h3>Remedial</h3>
+                <p>Remedial examination announcements.</p>
+            </div>
 
-            <ul>
-                <li>National Examination Updates</li>
-                <li>Exam Registration Information</li>
-                <li>Exam Schedules</li>
-                <li>Exam Results</li>
-                <li>Important Ministry Announcements</li>
-            </ul>
+            <div class="exam-card">
+                <div class="exam-icon">🎓</div>
+                <h3>University</h3>
+                <p>University examination updates.</p>
+            </div>
 
         </div>
 
@@ -636,18 +1179,23 @@
 </section>
 
 
-<!-- REQUIREMENTS -->
+<!-- =========================
+     REQUIREMENTS
+========================== -->
+
 <section class="requirements-section" id="requirements">
 
     <div class="container">
 
         <div class="section-title">
 
-            <h2>📋 Student Requirements</h2>
+            <div class="section-label">Student Support</div>
+
+            <h2>Tell Us What You Need</h2>
 
             <p>
-                Tell us what educational information
-                or support you need.
+                Send your educational question or request
+                to the Student Ethiopia team.
             </p>
 
         </div>
@@ -658,17 +1206,14 @@
             <h3>🎓 Submit Your Requirement</h3>
 
             <p class="intro">
-                Fill out the form below and send your
-                request to the Student Ethiopia team.
+                Complete the form below and send your request.
             </p>
 
 
-            <!-- FORM SUBMIT -->
             <form
                 action="https://formsubmit.co/studentethiopiabot@gmail.com"
                 method="POST">
 
-                <!-- Email settings -->
                 <input
                     type="hidden"
                     name="_subject"
@@ -689,7 +1234,7 @@
                     name="_next"
                     value="https://nexoramedia0345-ui.github.io/student-ethiopia-website/">
 
-                <!-- FULL NAME -->
+
                 <div class="form-group">
 
                     <label for="fullname">
@@ -706,7 +1251,6 @@
                 </div>
 
 
-                <!-- EMAIL -->
                 <div class="form-group">
 
                     <label for="email">
@@ -723,7 +1267,6 @@
                 </div>
 
 
-                <!-- PHONE -->
                 <div class="form-group">
 
                     <label for="phone">
@@ -739,7 +1282,6 @@
                 </div>
 
 
-                <!-- EDUCATION LEVEL -->
                 <div class="form-group">
 
                     <label for="education">
@@ -754,7 +1296,8 @@
                         <option value="">
                             Select your education level
                         </option>
-[10/4/2026 6:59 AM] Ashenafi Kusse: <option value="Grade 8">
+
+                        <option value="Grade 8">
                             Grade 8
                         </option>
 
@@ -783,7 +1326,6 @@
                 </div>
 
 
-                <!-- FIELD OF STUDY -->
                 <div class="form-group">
 
                     <label for="field">
@@ -797,10 +1339,7 @@
                         placeholder="Example: Computer Science">
 
                 </div>
-
-
-                <!-- CITY -->
-                <div class="form-group">
+[10/4/2026 8:03 AM] Ashenafi Kusse: <div class="form-group">
 
                     <label for="city">
                         City
@@ -815,7 +1354,6 @@
                 </div>
 
 
-                <!-- REQUIREMENT -->
                 <div class="form-group">
 
                     <label for="requirement">
@@ -831,7 +1369,6 @@
                 </div>
 
 
-                <!-- ADDITIONAL INFORMATION -->
                 <div class="form-group">
 
                     <label for="message">
@@ -846,7 +1383,6 @@
                 </div>
 
 
-                <!-- SUBMIT -->
                 <button
                     type="submit"
                     class="submit-btn">
@@ -864,7 +1400,10 @@
 </section>
 
 
-<!-- AI ASSISTANT -->
+<!-- =========================
+     AI ASSISTANT
+========================== -->
+
 <section class="ai-section">
 
     <div class="container">
@@ -878,8 +1417,8 @@
             <h2>AI Student Assistant</h2>
 
             <p>
-                Our AI-powered student assistant will
-                help students find educational information,
+                Our AI-powered student assistant will help
+                students find educational information,
                 understand learning topics and get useful
                 guidance.
             </p>
@@ -895,18 +1434,20 @@
 </section>
 
 
-<!-- TELEGRAM -->
+<!-- =========================
+     TELEGRAM
+========================== -->
+
 <section class="telegram-section">
 
     <div class="container">
 
-        <h2>📲 Join Student Ethiopia on Telegram</h2>
+        <h2>📲 Join Student Ethiopia</h2>
 
         <p>
-            Get the latest educational news,
-            examination information, opportunities
-            and important announcements directly
-            on Telegram.
+            Get the latest educational news, examination
+            information, opportunities and important
+            announcements directly on Telegram.
         </p>
 
         <a
@@ -923,7 +1464,10 @@
 </section>
 
 
-<!-- SUPPORT -->
+<!-- =========================
+     SUPPORT
+========================== -->
+
 <section class="container" id="support">
 
     <div class="support-box">
@@ -947,9 +1491,7 @@
             Email:
             <a
                 href="mailto:studentethiopiabot@gmail.com">
-
                 studentethiopiabot@gmail.com
-
             </a>
         </p>
 
@@ -958,22 +1500,100 @@
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================== -->
+
 <footer>
 
-    <p>
-        © 2026 Student Ethiopia
-    </p>
+    <div class="footer-content">
 
-    <p>
-        Education • Technology • Opportunities
-    </p>
+        <div class="footer-brand">
 
-    <p>
+            <h3>🎓 Student Ethiopia</h3>
+
+            <p>
+                Empowering Ethiopian students with
+                education, information and opportunities.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h4>Quick Links</h4>
+
+            <a href="#home">Home</a>
+            <a href="#resources">Resources</a>
+            <a href="#updates">Updates</a>
+            <a href="#exams">Exams</a>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h4>Connect</h4>
+
+            <a href="https://t.me/ministry2"
+               target="_blank">
+                Telegram
+            </a>
+
+            <a href="#support">
+                Student Support
+            </a>
+
+            <a href="mailto:studentethiopiabot@gmail.com">
+                Email Us
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 Student Ethiopia · Education • Technology • Opportunities
+        <br>
         Empowering Ethiopian Students 🇪🇹
-    </p>
+
+    </div>
 
 </footer>
+
+
+<!-- =========================
+     MOBILE MENU SCRIPT
+========================== -->
+
+<script>
+
+function toggleMenu() {
+
+    const nav = document.getElementById("mainNav");
+
+    nav.classList.toggle("active");
+
+}
+
+
+// Close mobile menu after clicking a link
+
+document.querySelectorAll("#mainNav a").forEach(function(link) {
+
+    link.addEventListener("click", function() {
+
+        document.getElementById("mainNav")
+            .classList.remove("active");
+
+    });
+
+});
+
+</script>
 
 </body>
 </html>
