@@ -1,166 +1,656 @@
-<!-- STUDY MATERIALS -->
-<section class="container" id="study-materials">
+[10/6/2026 12:20 AM] Ashenafi Kusse: <!DOCTYPE html>
+<html lang="en">
+<head>
 
-    <div class="title">
-        <h2>📚 Study Materials</h2>
-        <p>
-            Learning materials and exam preparation
-            resources for Ethiopian students.
-        </p>
-    </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <div class="study-menu">
+    <title>Student Ethiopia | Education & Learning</title>
 
-        <button onclick="showStudySection('exam')">
-            📝 Exam Preparation
-        </button>
+    <style>
 
-        <button onclick="showStudySection('guides')">
-            📖 Study Guides
-        </button>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        <button onclick="showStudySection('practice')">
-            ❓ Practice Questions
-        </button>
+        html {
+            scroll-behavior: smooth;
+        }
 
-        <button onclick="showStudySection('entrance')">
-            📚 Entrance Exams 2000–2018 E.C.
-        </button>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fb;
+            color: #222;
+            line-height: 1.6;
+        }
 
-        <button onclick="showStudySection('daily')">
-            🎯 Daily Practice
-        </button>
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-        <button onclick="showStudySection('premium')">
-            ⭐ Premium Materials
-        </button>
+        button {
+            font-family: inherit;
+        }
 
-    </div>
+        /* =========================
+           HEADER
+        ========================= */
 
+        header {
+            background: #0b3d91;
+            color: white;
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+        }
 
-    <!-- EXAM PREPARATION -->
-    <div class="study-content" id="exam">
+        .header-inner {
+            max-width: 1150px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
 
-        <h3>📝 Exam Preparation</h3>
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
 
-        <button>Grade 8 Exam Preparation</button>
-        <button>Grade 9 Exam Preparation</button>
-        <button>Grade 10 Exam Preparation</button>
-        <button>Grade 11 Exam Preparation</button>
-        <button>Grade 12 Exam Preparation</button>
-        <button>University Entrance / NGAT Preparation</button>
-        <button>Mock Exams</button>
+        nav {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
 
-    </div>
+        nav a {
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-
-    <!-- STUDY GUIDES -->
-    <div class="study-content" id="guides">
-
-        <h3>📖 Study Guides</h3>
-
-        <button>Subject Notes</button>
-        <button>Short Summaries</button>
-        <button>Important Formulas</button>
-        <button>Study Tips</button>
-
-    </div>
-
-
-    <!-- PRACTICE QUESTIONS -->
-    <div class="study-content" id="practice">
-
-        <h3>❓ Practice Questions</h3>
-
-        <h4>🔬 Natural Science Student</h4>
-
-        <button>Mathematics</button>
-        <button>Physics</button>
-        <button>Chemistry</button>
-        <button>Biology</button>
-        <button>English</button>
-        <button>Scholastic Aptitude</button>
-
-
-        <h4>📚 Social Science Student</h4>
-
-        <button>English</button>
-        <button>Economics</button>
-        <button>Geography</button>
-        <button>History</button>
-        <button>Mathematics</button>
-        <button>Scholastic Aptitude</button>
-        <button>General Knowledge</button>
-
-    </div>
+        nav a:hover {
+            color: #ffd43b;
+        }
 
 
-    <!-- ENTRANCE EXAMS -->
-    <div class="study-content" id="entrance">
+        /* =========================
+           CONTAINER
+        ========================= */
 
-        <h3>
-            📚 Entrance Exams
-            <br>
-            <small>2000 E.C. – 2018 E.C.</small>
-        </h3>
-
-        <h4>🔬 Natural Science Student</h4>
-
-        <button>Mathematics</button>
-        <button>Physics</button>
-        <button>Chemistry</button>
-        <button>Biology</button>
-        <button>English</button>
-        <button>Scholastic Aptitude</button>
+        .container {
+            width: 92%;
+            max-width: 1150px;
+            margin: auto;
+        }
 
 
-        <h4>👨‍🎓 Social Science Student</h4>
+        /* =========================
+           HERO
+        ========================= */
 
-        <button>English</button>
-        <button>Economics</button>
-        <button>Geography</button>
-        <button>History</button>
-        <button>Mathematics</button>
-        <button>Scholastic Aptitude</button>
+        .hero {
+            background: linear-gradient(135deg, #0b3d91, #1769d1);
+            color: white;
+            padding: 90px 20px;
+            text-align: center;
+        }
 
-    </div>
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 750px;
+            margin: auto;
+            font-size: 18px;
+            opacity: 0.95;
+        }
+
+        .hero-buttons {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background: white;
+            color: #0b3d91;
+            padding: 13px 22px;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-3px);
+        }
 
 
-    <!-- DAILY PRACTICE -->
-    <div class="study-content" id="daily">
+        /* =========================
+           TITLES
+        ========================= */
 
-        <h3>🎯 Daily Practice</h3>
+        .title {
+            text-align: center;
+            margin-bottom: 35px;
+        }
 
-        <button>Daily Question</button>
-        <button>Weekly Challenge</button>
-        <button>Answer and Explanation</button>
+        .title h2 {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
 
-    </div>
+        .title p {
+            color: #666;
+        }
 
 
-    <!-- PREMIUM -->
-    <div class="study-content premium-box" id="premium">
+        /* =========================
+           RESOURCES
+        ========================= */
 
-        <h3>⭐ Premium Materials</h3>
+        .resources {
+            padding: 65px 0;
+        }
 
-        <p>
-            Access exclusive premium study materials,
-            practice questions and exam preparation resources.
-        </p>
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+        }
 
-        <div class="price">
-            💰 100 ETB / 30 Days
+        .resource-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+        }
+
+        .resource-card .icon {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        .resource-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .resource-card p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        .card-btn {
+            display: inline-block;
+            background: #0b3d91;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .card-btn:hover {
+            background: #1769d1;
+        }
+
+
+        /* =========================
+           STUDY MATERIALS
+        ========================= */
+
+        #study-materials {
+            padding: 65px 0;
+            scroll-margin-top: 80px;
+        }
+
+        #study-materials .title {
+            margin-bottom: 30px;
+        }
+
+        .study-menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .study-menu button {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            padding: 18px 15px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .study-menu button:hover {
+            transform: translateY(-3px);
+            background: #eef6ff;
+            border-color: #007bff;
+            color: #007bff;
+        }
+
+
+        /* STUDY CONTENT */
+
+        .study-content {
+            display: none;
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .study-content.active {
+            display: block;
+        }
+
+        .study-content h3 {
+            font-size: 25px;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .study-content h4 {
+            margin-top: 25px;
+            margin-bottom: 15px;
+            color: #444;
+            font-size: 18px;
+        }
+
+        .study-content button {
+            display: block;
+            width: 100%;
+            background: #f7f9fc;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 14px 16px;
+            margin: 10px 0;
+            text-align: left;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .study-content button:hover {
+            background: #eaf4ff;
+            border-color: #007bff;
+            color: #007bff;
+            transform: translateX(4px);
+        }
+
+        .back-button {
+            background: #555 !important;
+            color: white !important;
+            border: none !important;
+            text-align: center !important;
+            margin-top: 25px !important;
+        }
+
+        .back-button:hover {
+            background: #333 !important;
+            color: white !important;
+            transform: none !important;
+        }
+
+
+        /* =========================
+           PREMIUM
+        ========================= */
+
+        .premium-box {
+            text-align: center;
+            border: 2px solid #ffd700;
+            background: #fffdf2;
+        }
+
+        .premium-box h3 {
+            color: #b8860b;
+        }
+
+        .premium-box p {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .price {
+            display: inline-block;
+            background: white;
+            color: #b8860b;
+            border: 2px solid #ffd700;
+            border-radius: 12px;
+            padding: 15px 25px;
+            margin: 15px 0;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .premium-button {
+            background: #f5b400 !important;
+            color: white !important;
+            border: none !important;
+            text-align: center !important;
+            font-weight: bold;
+            max-width: 300px;
+            margin: 20px auto !important;
+        }
+[10/6/2026 12:20 AM] Ashenafi Kusse: .premium-button:hover {
+            background: #d99c00 !important;
+            color: white !important;
+        }
+
+
+        /* =========================
+           TELEGRAM
+        ========================= */
+
+        .telegram-section {
+            padding: 65px 0;
+        }
+
+        .telegram-box {
+            background: #eaf4ff;
+            border: 1px solid #c9e2ff;
+            border-radius: 18px;
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        .telegram-box h2 {
+            margin-bottom: 10px;
+        }
+
+        .telegram-box p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .telegram-btn {
+            display: inline-block;
+            background: #229ed9;
+            color: white;
+            padding: 13px 25px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .telegram-btn:hover {
+            background: #168ac0;
+        }
+
+
+        /* =========================
+           REQUIREMENTS
+        ========================= */
+
+        .requirements {
+            padding: 65px 0;
+        }
+
+        .form-box {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ddd;
+            border-radius: 9px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #0b3d91;
+        }
+
+        .submit-btn {
+            width: 100%;
+            border: none;
+            background: #0b3d91;
+            color: white;
+            padding: 14px;
+            border-radius: 9px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background: #1769d1;
+        }
+
+
+        /* =========================
+           SUPPORT
+        ========================= */
+
+        .support {
+            padding: 65px 0;
+        }
+
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+        }
+
+        .support-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+        }
+
+        .support-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .support-card p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================
+           PRIVACY
+        ========================= */
+
+        .privacy {
+            padding: 65px 0;
+        }
+
+        .privacy-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+        }
+
+        .privacy-box h3 {
+            margin-bottom: 15px;
+        }
+
+        .privacy-box p {
+            color: #555;
+            margin-bottom: 12px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+            margin-top: 30px;
+        }
+
+        footer p {
+            color: #cbd5e1;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .header-inner {
+                flex-direction: column;
+            }
+
+            nav {
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            .hero {
+                padding: 65px 15px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .title h2 {
+                font-size: 25px;
+            }
+
+            .study-menu {
+                grid-template-columns: 1fr;
+            }
+
+            .study-menu button {
+                padding: 16px;
+                font-size: 15px;
+            }
+
+            .study-content {
+                padding: 18px;
+            }
+
+            .study-content h3 {
+                font-size: 21px;
+            }
+
+            .study-content h4 {
+                font-size: 16px;
+            }
+
+            .form-box {
+                padding: 20px;
+            }
+        }
+
+
+        @media (max-width: 400px) {
+
+            .hero h1 {
+                font-size: 26px;
+            }
+
+            .resource-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .study-content button {
+                font-size: 14px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <div class="header-inner">
+
+        <div class="logo">
+            🎓 Student Ethiopia
         </div>
 
-        <p>
-            🔐 Only users with confirmed active Premium
-            access can open Premium Materials.
-        </p>
-
-        <button class="premium-button">
-            🔐 Check Premium Access
-        </button>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#resources">Resources</a>
+            <a href="#study-materials">Study Materials</a>
+            <a href="#telegram">Telegram</a>
+            <a href="#support">Support</a>
+        </nav>
 
     </div>
 
-</section>
+</header>
+
+
+<!-- =========================
