@@ -1,383 +1,166 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- STUDY MATERIALS -->
+<section class="container" id="study-materials">
 
-    <title>Student Ethiopia</title>
+    <div class="title">
+        <h2>📚 Study Materials</h2>
+        <p>
+            Learning materials and exam preparation
+            resources for Ethiopian students.
+        </p>
+    </div>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <div class="study-menu">
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f7f6;
-            color: #222;
-        }
+        <button onclick="showStudySection('exam')">
+            📝 Exam Preparation
+        </button>
 
-        header {
-            background: #087f5b;
-            color: white;
-            padding: 18px 25px;
-        }
+        <button onclick="showStudySection('guides')">
+            📖 Study Guides
+        </button>
 
-        .navbar {
-            max-width: 1200px;
-            margin: auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+        <button onclick="showStudySection('practice')">
+            ❓ Practice Questions
+        </button>
 
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
+        <button onclick="showStudySection('entrance')">
+            📚 Entrance Exams 2000–2018 E.C.
+        </button>
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: bold;
-        }
+        <button onclick="showStudySection('daily')">
+            🎯 Daily Practice
+        </button>
 
-        nav a:hover {
-            color: #d8f3dc;
-        }
+        <button onclick="showStudySection('premium')">
+            ⭐ Premium Materials
+        </button>
 
-        .hero {
-            background: linear-gradient(135deg, #087f5b, #12b886);
-            color: white;
-            text-align: center;
-            padding: 100px 20px;
-        }
-
-        .hero h1 {
-            font-size: 50px;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 20px;
-            max-width: 750px;
-            margin: auto;
-        }
-
-        .button {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 14px 28px;
-            background: white;
-            color: #087f5b;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-        }
-
-        .button:hover {
-            background: #e9f5ef;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 70px 20px;
-        }
-
-        .title {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .title h2 {
-            color: #087f5b;
-            font-size: 35px;
-            margin-bottom: 10px;
-        }
-
-        .title p {
-            color: #666;
-        }
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        }
-
-        .card .icon {
-            font-size: 45px;
-            margin-bottom: 15px;
-        }
-
-        .card h3 {
-            color: #087f5b;
-            margin-bottom: 10px;
-        }
-
-        .card p {
-            color: #666;
-        }
-
-        .telegram {
-            background: #229ed9;
-            color: white;
-            text-align: center;
-        }
-
-        .telegram h2 {
-            font-size: 35px;
-            margin-bottom: 15px;
-        }
-
-        .telegram p {
-            max-width: 700px;
-            margin: auto;
-        }
-
-        footer {
-            background: #12372a;
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-        }
-
-        @media (max-width: 800px) {
-
-            .navbar {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav a {
-                margin: 5px;
-                display: inline-block;
-            }
-
-            .hero h1 {
-                font-size: 38px;
-            }
-
-            .cards {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        @media (max-width: 550px) {
-
-            .cards {
-                grid-template-columns: 1fr;
-            }
-
-            .hero {
-                padding: 70px 15px;
-            }
-
-            .hero h1 {
-                font-size: 32px;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-    <!-- HEADER -->
-    <header>
-
-        <div class="navbar">
-
-            <div class="logo">
-                🎓 Student Ethiopia
-            </div>
-
-            <nav>
-                <a href="#home">Home</a>
-                <a href="#resources">Resources</a>
-                <a href="#telegram">Telegram</a>
-            </nav>
-
-        </div>
-
-    </header>
+    </div>
 
 
-    <!-- HERO -->
-    <section class="hero" id="home">
+    <!-- EXAM PREPARATION -->
+    <div class="study-content" id="exam">
 
-        <h1>🎓 Student Ethiopia</h1>
+        <h3>📝 Exam Preparation</h3>
+
+        <button>Grade 8 Exam Preparation</button>
+        <button>Grade 9 Exam Preparation</button>
+        <button>Grade 10 Exam Preparation</button>
+        <button>Grade 11 Exam Preparation</button>
+        <button>Grade 12 Exam Preparation</button>
+        <button>University Entrance / NGAT Preparation</button>
+        <button>Mock Exams</button>
+
+    </div>
+
+
+    <!-- STUDY GUIDES -->
+    <div class="study-content" id="guides">
+
+        <h3>📖 Study Guides</h3>
+
+        <button>Subject Notes</button>
+        <button>Short Summaries</button>
+        <button>Important Formulas</button>
+        <button>Study Tips</button>
+
+    </div>
+
+
+    <!-- PRACTICE QUESTIONS -->
+    <div class="study-content" id="practice">
+
+        <h3>❓ Practice Questions</h3>
+
+        <h4>🔬 Natural Science Student</h4>
+
+        <button>Mathematics</button>
+        <button>Physics</button>
+        <button>Chemistry</button>
+        <button>Biology</button>
+        <button>English</button>
+        <button>Scholastic Aptitude</button>
+
+
+        <h4>📚 Social Science Student</h4>
+
+        <button>English</button>
+        <button>Economics</button>
+        <button>Geography</button>
+        <button>History</button>
+        <button>Mathematics</button>
+        <button>Scholastic Aptitude</button>
+        <button>General Knowledge</button>
+
+    </div>
+
+
+    <!-- ENTRANCE EXAMS -->
+    <div class="study-content" id="entrance">
+
+        <h3>
+            📚 Entrance Exams
+            <br>
+            <small>2000 E.C. – 2018 E.C.</small>
+        </h3>
+
+        <h4>🔬 Natural Science Student</h4>
+
+        <button>Mathematics</button>
+        <button>Physics</button>
+        <button>Chemistry</button>
+        <button>Biology</button>
+        <button>English</button>
+        <button>Scholastic Aptitude</button>
+
+
+        <h4>👨‍🎓 Social Science Student</h4>
+
+        <button>English</button>
+        <button>Economics</button>
+        <button>Geography</button>
+        <button>History</button>
+        <button>Mathematics</button>
+        <button>Scholastic Aptitude</button>
+
+    </div>
+
+
+    <!-- DAILY PRACTICE -->
+    <div class="study-content" id="daily">
+
+        <h3>🎯 Daily Practice</h3>
+
+        <button>Daily Question</button>
+        <button>Weekly Challenge</button>
+        <button>Answer and Explanation</button>
+
+    </div>
+
+
+    <!-- PREMIUM -->
+    <div class="study-content premium-box" id="premium">
+
+        <h3>⭐ Premium Materials</h3>
 
         <p>
-            Your educational platform for scholarships,
-            university admissions, study materials,
-            examinations and student opportunities.
+            Access exclusive premium study materials,
+            practice questions and exam preparation resources.
         </p>
 
-        <a
-            href="#resources"
-            class="button">
-            Explore Resources
-        </a>
-
-    </section>
-
-
-    <!-- RESOURCES -->
-    <section class="container" id="resources">
-
-        <div class="title">
-
-            <h2>📚 Student Resources</h2>
-
-            <p>
-                Useful educational information
-                for Ethiopian students.
-            </p>
-
+        <div class="price">
+            💰 100 ETB / 30 Days
         </div>
-
-
-        <div class="cards">
-
-            <div class="card">
-
-                <div class="icon">🎓</div>
-
-                <h3>Scholarships</h3>
-
-                <p>
-                    Find scholarship opportunities
-                    and educational funding information.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="icon">🏫</div>
-
-                <h3>University Admissions</h3>
-
-                <p>
-                    Information about university
-                    admissions and registration.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="icon">📖</div>
-
-                <h3>Study Materials</h3>
-
-                <p>
-                    Learning materials, guides
-                    and educational resources.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="icon">📝</div>
-
-                <h3>Exam Information</h3>
-
-                <p>
-                    Important information about
-                    examinations and results.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="icon">📢</div>
-
-                <h3>Announcements</h3>
-
-                <p>
-                    Stay updated with important
-                    educational announcements.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="icon">💡</div>
-
-                <h3>Learning Tips</h3>
-
-                <p>
-                    Useful study techniques
-                    and learning strategies.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- TELEGRAM -->
-    <section class="telegram" id="telegram">
-
-        <div class="container">
-
-            <h2>📲 Join Our Telegram Channel</h2>
-
-            <p>
-                Get the latest educational news,
-                examination information, opportunities
-                and important announcements.
-            </p>
-
-            <a
-                href="https://t.me/ministry2"
-                target="_blank"
-                class="button">
-
-                Join @ministry2
-
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- FOOTER -->
-    <footer>
 
         <p>
-            © 2026 Student Ethiopia
+            🔐 Only users with confirmed active Premium
+            access can open Premium Materials.
         </p>
 
-        <p>
-            Education • Technology • Opportunities 🇪🇹
-        </p>
+        <button class="premium-button">
+            🔐 Check Premium Access
+        </button>
 
-    </footer>
+    </div>
 
-</body>
-</html>
+</section>
