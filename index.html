@@ -1,13 +1,10 @@
-[10/4/2026 8:03 AM] Ashenafi Kusse: <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Student Ethiopia | Education & Opportunities</title>
-
-    <meta name="description"
-          content="Student Ethiopia - Scholarships, university admissions, study materials, exam information, education news and student opportunities.">
+    <title>Student Ethiopia</title>
 
     <style>
         * {
@@ -16,1083 +13,180 @@
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
-        :root {
-            --primary: #087f5b;
-            --primary-dark: #056044;
-            --secondary: #12b886;
-            --telegram: #229ed9;
-            --dark: #102a23;
-            --text: #26352f;
-            --muted: #6b7772;
-            --light: #f4f8f6;
-            --white: #ffffff;
-            --border: #e1ebe6;
-            --shadow: 0 10px 35px rgba(16, 42, 35, 0.08);
-        }
-
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: var(--light);
-            color: var(--text);
-            line-height: 1.6;
+            font-family: Arial, sans-serif;
+            background: #f5f7f6;
+            color: #222;
         }
-
-        a {
-            text-decoration: none;
-        }
-
-        /* =========================
-           HEADER
-        ========================== */
 
         header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(255,255,255,0.96);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border);
+            background: #087f5b;
+            color: white;
+            padding: 18px 25px;
         }
 
         .navbar {
             max-width: 1200px;
             margin: auto;
-            padding: 15px 20px;
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
         }
 
         .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--dark);
-            font-size: 23px;
-            font-weight: 800;
-        }
-
-        .logo-icon {
-            width: 42px;
-            height: 42px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            font-size: 22px;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            align-items: center;
-            gap: 25px;
-        }
-
-        nav a {
-            color: #41514b;
-            font-size: 15px;
-            font-weight: 700;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--primary);
-        }
-
-        .nav-telegram {
-            background: var(--telegram);
-            color: white !important;
-            padding: 9px 16px;
-            border-radius: 9px;
-        }
-
-        .menu-btn {
-            display: none;
-            border: none;
-            background: var(--primary);
-            color: white;
-            width: 42px;
-            height: 42px;
-            border-radius: 10px;
-            font-size: 22px;
-            cursor: pointer;
-        }
-
-        /* =========================
-           HERO
-        ========================== */
-
-        .hero {
-            position: relative;
-            overflow: hidden;
-            background:
-                radial-gradient(circle at 15% 20%, rgba(255,255,255,0.12), transparent 25%),
-                radial-gradient(circle at 85% 80%, rgba(255,255,255,0.10), transparent 25%),
-                linear-gradient(135deg, #056044, #087f5b 50%, #12b886);
-            color: white;
-            padding: 105px 20px 95px;
-        }
-
-        .hero-content {
-            max-width: 1050px;
-            margin: auto;
-            text-align: center;
-        }
-
-        .hero-badge {
-            display: inline-block;
-            background: rgba(255,255,255,0.14);
-            border: 1px solid rgba(255,255,255,0.25);
-            padding: 8px 16px;
-            border-radius: 30px;
-            margin-bottom: 22px;
-            font-size: 14px;
+            font-size: 24px;
             font-weight: bold;
         }
 
-        .hero h1 {
-            font-size: clamp(38px, 6vw, 68px);
-            line-height: 1.1;
-            margin-bottom: 22px;
-            letter-spacing: -1.5px;
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
         }
 
-        .hero h1 span {
-            color: #d9fff0;
+        nav a:hover {
+            color: #d8f3dc;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #087f5b, #12b886);
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
         }
 
         .hero p {
-            max-width: 780px;
+            font-size: 20px;
+            max-width: 750px;
             margin: auto;
-            font-size: 19px;
-            color: rgba(255,255,255,0.9);
         }
 
-        .hero-buttons {
-            margin-top: 34px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 14px 23px;
-            border-radius: 10px;
-            font-weight: 800;
-            transition: 0.3s;
-        }
-
-        .btn-primary {
+        .button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 28px;
             background: white;
-            color: var(--primary);
+            color: #087f5b;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
         }
 
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        .button:hover {
+            background: #e9f5ef;
         }
-
-        .btn-telegram {
-            background: var(--telegram);
-            color: white;
-        }
-
-        .btn-telegram:hover {
-            background: #168ac2;
-            transform: translateY(-3px);
-        }
-
-        /* =========================
-           STATS
-        ========================== */
-
-        .stats {
-            max-width: 1050px;
-            margin: -45px auto 0;
-            position: relative;
-            z-index: 5;
-            padding: 0 20px;
-        }
-
-        .stats-grid {
-            background: white;
-            border-radius: 18px;
-            box-shadow: var(--shadow);
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            overflow: hidden;
-        }
-
-        .stat {
-            text-align: center;
-            padding: 25px 15px;
-            border-right: 1px solid var(--border);
-        }
-
-        .stat:last-child {
-            border-right: none;
-        }
-
-        .stat strong {
-            display: block;
-            color: var(--primary);
-            font-size: 27px;
-        }
-
-        .stat span {
-            color: var(--muted);
-            font-size: 13px;
-        }
-
-        /* =========================
-           GENERAL
-        ========================== */
 
         .container {
             max-width: 1200px;
             margin: auto;
-            padding: 80px 20px;
+            padding: 70px 20px;
         }
 
-        .section-title {
+        .title {
             text-align: center;
-            max-width: 700px;
-            margin: 0 auto 45px;
+            margin-bottom: 40px;
         }
 
-        .section-label {
-            color: var(--primary);
-            font-size: 13px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 8px;
-        }
-
-        .section-title h2 {
-            font-size: clamp(29px, 4vw, 40px);
-            color: var(--dark);
-            margin-bottom: 10px;
-        }
-
-        .section-title p {
-            color: var(--muted);
-        }
-
-        /* =========================
-   NEWS SEARCH & CARDS
-========================== */
-
-.news-search {
-    max-width: 650px;
-    margin: 0 auto 35px;
-}
-
-.news-search input {
-    width: 100%;
-    padding: 16px 20px;
-    border: 1px solid #d8e4df;
-    border-radius: 12px;
-    font-size: 16px;
-    outline: none;
-    background: white;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-}
-
-.news-search input:focus {
-    border-color: #087f5b;
-    box-shadow: 0 0 0 4px rgba(8,127,91,0.08);
-}
-
-.news-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-}
-
-.news-card {
-    display: flex;
-    background: white;
-    border: 1px solid #e1ebe6;
-    border-radius: 18px;
-    overflow: hidden;
-    transition: 0.3s;
-}
-
-.news-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 35px rgba(16,42,35,0.10);
-}
-
-.news-image {
-    width: 130px;
-    min-width: 130px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(
-        135deg,
-        #087f5b,
-        #12b886
-    );
-    color: white;
-    font-size: 45px;
-}
-
-.news-content {
-    padding: 22px;
-}
-
-.news-category {
-    color: #087f5b;
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 1px;
-}
-
-.news-content h3 {
-    color: #102a23;
-    margin: 7px 0;
-    font-size: 19px;
-}
-
-.news-content p {
-    color: #6b7772;
-    font-size: 14px;
-}
-
-.news-content a {
-    display: inline-block;
-    margin-top: 12px;
-    color: #087f5b;
-    font-weight: bold;
-    font-size: 14px;
-}
-
-
-/* MOBILE */
-
-@media (max-width: 700px) {
-
-    .news-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .news-card {
-        flex-direction: column;
-    }
-
-    .news-image {
-        width: 100%;
-        height: 110px;
-    }
-
-}
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 22px;
-        }
-
-        .card {
-            position: relative;
-            background: white;
-            padding: 30px 25px;
-            border-radius: 18px;
-            border: 1px solid var(--border);
-            box-shadow: 0 5px 20px rgba(16,42,35,0.04);
-            transition: 0.3s;
-            overflow: hidden;
-        }
-
-        .card::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-7px);
-            box-shadow: var(--shadow);
-        }
-[10/4/2026 8:03 AM] Ashenafi Kusse: .card:hover::after {
-            transform: scaleX(1);
-        }
-
-        .icon {
-            width: 58px;
-            height: 58px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 15px;
-            background: #e8f7f1;
-            font-size: 29px;
-            margin-bottom: 18px;
-        }
-
-        .card h3 {
-            color: var(--dark);
-            margin-bottom: 9px;
-            font-size: 19px;
-        }
-
-        .card p {
-            color: var(--muted);
-            font-size: 14px;
-        }
-
-        .card-link {
-            display: inline-block;
-            margin-top: 15px;
-            color: var(--primary);
-            font-size: 14px;
-            font-weight: bold;
-        }
-
-       <!-- =========================
-     LATEST EDUCATION NEWS
-========================== -->
-
-<section class="updates-section" id="updates">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <div class="section-label">Latest News</div>
-
-            <h2>📰 Education News & Updates</h2>
-
-            <p>
-                Find the latest information about exams,
-                universities, scholarships and opportunities.
-            </p>
-
-        </div>
-
-        <!-- SEARCH -->
-
-        <div class="news-search">
-
-            <input
-                type="text"
-                id="newsSearch"
-                placeholder="🔎 Search education news..."
-                onkeyup="searchNews()">
-
-        </div>
-
-
-        <!-- NEWS CARDS -->
-
-        <div class="news-grid" id="newsGrid">
-
-            <article class="news-card">
-
-                <div class="news-image">📝</div>
-
-                <div class="news-content">
-
-                    <span class="news-category">
-                        EXAM
-                    </span>
-
-                    <h3>
-                        National Examination Updates
-                    </h3>
-
-                    <p>
-                        Get the latest information about
-                        national examinations, registration,
-                        schedules and results.
-                    </p>
-
-                    <a href="#exams">
-                        Read More →
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <article class="news-card">
-
-                <div class="news-image">🎓</div>
-
-                <div class="news-content">
-
-                    <span class="news-category">
-                        UNIVERSITY
-                    </span>
-
-                    <h3>
-                        University Admission Updates
-                    </h3>
-
-                    <p>
-                        Stay informed about university
-                        admissions, registration and
-                        important announcements.
-                    </p>
-
-                    <a href="#resources">
-                        Read More →
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <article class="news-card">
-
-                <div class="news-image">💰</div>
-
-                <div class="news-content">
-
-                    <span class="news-category">
-                        SCHOLARSHIP
-                    </span>
-
-                    <h3>
-                        Scholarship Opportunities
-                    </h3>
-
-                    <p>
-                        Discover scholarship opportunities
-                        and educational funding information.
-                    </p>
-
-                    <a href="#resources">
-                        Read More →
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <article class="news-card">
-
-                <div class="news-image">📢</div>
-
-                <div class="news-content">
-
-                    <span class="news-category">
-                        ANNOUNCEMENT
-                    </span>
-
-                    <h3>
-                        Important Student Announcements
-                    </h3>
-
-                    <p>
-                        Important announcements and
-                        educational information for students.
-                    </p>
-
-                    <a href="https://t.me/ministry2"
-                       target="_blank">
-                        Follow Updates →
-                    </a>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-        .updates-section {
-            background: white;
-        }
-
-        .updates {
-            display: grid;
-            grid-template-columns: 1.5fr 1fr;
-            gap: 25px;
-        }
-
-        .featured-update,
-        .update-list {
-            background: var(--light);
-            border: 1px solid var(--border);
-            border-radius: 18px;
-            padding: 30px;
-        }
-
-        .featured-update .update-icon {
-            font-size: 42px;
-            margin-bottom: 15px;
-        }
-
-        .featured-update h3 {
-            font-size: 25px;
-            color: var(--dark);
-            margin-bottom: 12px;
-        }
-
-        .featured-update p {
-            color: var(--muted);
-        }
-
-        .update-item {
-            padding: 15px 0;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .update-item:last-child {
-            border-bottom: none;
-        }
-
-        .update-item span {
-            color: var(--primary);
-            font-size: 12px;
-            font-weight: bold;
-        }
-
-        .update-item h4 {
-            margin-top: 4px;
-            color: var(--dark);
-        }
-
-        /* =========================
-           EXAMS
-        ========================== */
-
-        .exam-section {
-            background: #edf8f4;
-        }
-
-        .exam-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 18px;
-        }
-
-        .exam-card {
-            background: white;
-            border-radius: 16px;
-            padding: 25px 20px;
-            text-align: center;
-            border: 1px solid var(--border);
-            transition: 0.3s;
-        }
-
-        .exam-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow);
-        }
-
-        .exam-card .exam-icon {
+        .title h2 {
+            color: #087f5b;
             font-size: 35px;
             margin-bottom: 10px;
         }
 
-        .exam-card h3 {
-            color: var(--primary);
-            margin-bottom: 6px;
+        .title p {
+            color: #666;
         }
 
-        .exam-card p {
-            color: var(--muted);
-            font-size: 13px;
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
         }
 
-        /* =========================
-           REQUIREMENTS FORM
-        ========================== */
-
-        .requirements-section {
+        .card {
             background: white;
-        }
-
-        .form-container {
-            max-width: 850px;
-            margin: auto;
-            background: var(--light);
-            padding: 38px;
-            border-radius: 20px;
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow);
-        }
-
-        .form-container h3 {
+            padding: 30px;
+            border-radius: 15px;
             text-align: center;
-            color: var(--dark);
-            font-size: 27px;
-            margin-bottom: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
         }
 
-        .intro {
-            text-align: center;
-            color: var(--muted);
-            margin-bottom: 30px;
-        }
-
-        .form-group {
-            margin-bottom: 18px;
-        }
-
-        .form-group label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 7px;
-            color: var(--dark);
-            font-size: 14px;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 14px;
-            border: 1px solid #d2ddd8;
-            border-radius: 10px;
-            font-size: 15px;
-            font-family: inherit;
-            outline: none;
-            background: white;
-            transition: 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(8,127,91,0.1);
-        }
-
-        .form-group textarea {
-            min-height: 130px;
-            resize: vertical;
-        }
-
-        .submit-btn {
-            width: 100%;
-            border: none;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 15px;
-            font-size: 16px;
-            font-weight: bold;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(8,127,91,0.2);
-        }
-
-        /* =========================
-           AI SECTION
-        ========================== */
-
-        .ai-section {
-            background: linear-gradient(135deg, #102a23, #174d3c);
-            color: white;
-        }
-
-        .ai-box {
-            max-width: 850px;
-            margin: auto;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .ai-icon {
-            width: 75px;
-            height: 75px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            background: rgba(255,255,255,0.1);
-            border: 1px solid rgba(255,255,255,0.15);
-            border-radius: 22px;
-            font-size: 38px;
-        }
-
-        .ai-box h2 {
-            font-size: 34px;
-            margin-bottom: 12px;
-        }
-
-        .ai-box p {
-            max-width: 700px;
-            margin: auto;
-            color: rgba(255,255,255,0.75);
-        }
-
-        .coming-soon {
-            display: inline-block;
-            margin-top: 25px;
-            background: var(--secondary);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-weight: bold;
-        }
-
-        /* =========================
-           TELEGRAM
-        ========================== */
-
-        .telegram-section {
-            background: linear-gradient(135deg, #229ed9, #168ac2);
-            color: white;
-            text-align: center;
-        }
-
-        .telegram-section h2 {
-            font-size: 34px;
-            margin-bottom: 12px;
-        }
-
-        .telegram-section p {
-            max-width: 700px;
-            margin: auto auto 25px;
-            color: rgba(255,255,255,0.9);
-        }
-
-        /* =========================
-           SUPPORT
-        ========================== */
-
-        .support-box {
-            text-align: center;
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 40px;
-            border-radius: 20px;
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow);
-        }
-
-        .support-box h2 {
-            color: var(--dark);
+        .card .icon {
+            font-size: 45px;
             margin-bottom: 15px;
         }
 
-        .support-box p {
-            margin: 9px 0;
-            color: var(--muted);
-        }
-
-        .support-box a {
-            color: var(--primary);
-            font-weight: bold;
-        }
-
-        /* =========================
-           FOOTER
-        ========================== */
-
-        footer {
-            background: #0b211a;
-            color: white;
-            padding: 45px 20px 25px;
-        }
-
-        .footer-content {
-            max-width: 1100px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: 1.5fr 1fr 1fr;
-            gap: 35px;
-        }
-
-        .footer-brand h3 {
-            font-size: 22px;
+        .card h3 {
+            color: #087f5b;
             margin-bottom: 10px;
         }
-[10/4/2026 8:03 AM] Ashenafi Kusse: .footer-brand p,
-        .footer-links a {
-            color: rgba(255,255,255,0.65);
-            font-size: 14px;
+
+        .card p {
+            color: #666;
         }
 
-        .footer-links h4 {
-            margin-bottom: 12px;
-        }
-
-        .footer-links a {
-            display: block;
-            margin: 7px 0;
-            transition: 0.3s;
-        }
-
-        .footer-links a:hover {
+        .telegram {
+            background: #229ed9;
             color: white;
-        }
-
-        .copyright {
-            max-width: 1100px;
-            margin: 35px auto 0;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.12);
             text-align: center;
-            color: rgba(255,255,255,0.55);
-            font-size: 13px;
         }
 
-        /* =========================
-           MOBILE
-        ========================== */
+        .telegram h2 {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
 
-        @media (max-width: 900px) {
+        .telegram p {
+            max-width: 700px;
+            margin: auto;
+        }
 
-            .menu-btn {
-                display: block;
-            }
+        footer {
+            background: #12372a;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
 
-            nav {
-                display: none;
-                position: absolute;
-                top: 72px;
-                left: 0;
-                width: 100%;
-                background: white;
-                border-bottom: 1px solid var(--border);
-                box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-            }
+        @media (max-width: 800px) {
 
-            nav.active {
-                display: block;
-            }
-
-            nav ul {
+            .navbar {
                 flex-direction: column;
-                align-items: stretch;
-                gap: 0;
-                padding: 10px 20px 20px;
-            }
-
-            nav li {
-                border-bottom: 1px solid var(--border);
+                gap: 15px;
             }
 
             nav a {
-                display: block;
-                padding: 13px 5px;
+                margin: 5px;
+                display: inline-block;
             }
 
-            .nav-telegram {
-                text-align: center;
-                margin-top: 5px;
+            .hero h1 {
+                font-size: 38px;
             }
 
             .cards {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .exam-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .updates {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-content {
                 grid-template-columns: 1fr 1fr;
             }
         }
 
-        @media (max-width: 600px) {
-
-            .navbar {
-                padding: 12px 15px;
-            }
-
-            .logo {
-                font-size: 19px;
-            }
-
-            .logo-icon {
-                width: 38px;
-                height: 38px;
-            }
-
-            .hero {
-                padding: 75px 15px 80px;
-            }
-
-            .hero p {
-                font-size: 16px;
-            }
-
-            .stats-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .stat {
-                border-right: none;
-                border-bottom: 1px solid var(--border);
-            }
-
-            .stat:nth-child(odd) {
-                border-right: 1px solid var(--border);
-            }
-
-            .stat:nth-child(3),
-            .stat:nth-child(4) {
-                border-bottom: none;
-            }
-
-            .container {
-                padding: 60px 15px;
-            }
+        @media (max-width: 550px) {
 
             .cards {
                 grid-template-columns: 1fr;
             }
 
-            .exam-grid {
-                grid-template-columns: 1fr 1fr;
+            .hero {
+                padding: 70px 15px;
             }
 
-            .form-container {
-                padding: 25px 18px;
-            }
-
-            .featured-update,
-            .update-list {
-                padding: 22px;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-            }
-
-            .telegram-section h2 {
-                font-size: 27px;
+            .hero h1 {
+                font-size: 32px;
             }
         }
     </style>
@@ -1100,759 +194,190 @@
 
 <body>
 
-<!-- =========================
-     HEADER
-========================== -->
+    <!-- HEADER -->
+    <header>
 
-<header>
-    <div class="navbar">
+        <div class="navbar">
 
-        <a href="#home" class="logo">
-            <span class="logo-icon">🎓</span>
-            <span>Student Ethiopia</span>
-        </a>
+            <div class="logo">
+                🎓 Student Ethiopia
+            </div>
 
-        <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">
-            ☰
-        </button>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#resources">Resources</a>
+                <a href="#telegram">Telegram</a>
+            </nav>
 
-        <nav id="mainNav">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#resources">Resources</a></li>
-                <li><a href="#updates">Updates</a></li>
-                <li><a href="#exams">Exams</a></li>
-                <li><a href="#requirements">Requirements</a></li>
-                <li><a href="#support">Support</a></li>
-                <li>
-                    <a class="nav-telegram"
-                       href="https://t.me/ministry2"
-                       target="_blank">
-                        📲 Telegram
-                    </a>
-                </li>
-            </ul>
-        </nav>
-
-    </div>
-</header>
-
-
-<!-- =========================
-     HERO
-========================== -->
-
-<section class="hero" id="home">
-
-    <div class="hero-content">
-
-        <div class="hero-badge">
-            🇪🇹 Education Platform for Ethiopian Students
         </div>
 
-        <h1>
-            Your Future Starts<br>
-            <span>With Knowledge.</span>
-        </h1>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <h1>🎓 Student Ethiopia</h1>
 
         <p>
-            Discover scholarships, university admissions,
-            study materials, examination information,
-            educational news and student opportunities.
-        </p>
-
-        <div class="hero-buttons">
-
-            <a href="#resources" class="btn btn-primary">
-                📚 Explore Resources
-            </a>
-
-            <a href="https://t.me/ministry2"
-               target="_blank"
-               class="btn btn-telegram">
-                📲 Join Telegram
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     STATS
-========================== -->
-
-<section class="stats">
-
-    <div class="stats-grid">
-
-        <div class="stat">
-            <strong>📚</strong>
-            <span>Study Resources</span>
-        </div>
-
-        <div class="stat">
-            <strong>📝</strong>
-            <span>Exam Updates</span>
-        </div>
-
-        <div class="stat">
-            <strong>🎓</strong>
-            <span>University Info</span>
-        </div>
-
-        <div class="stat">
-            <strong>🇪🇹</strong>
-            <span>For Ethiopian Students</span>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     RESOURCES
-========================== -->
-
-<section class="container" id="resources">
-
-    <div class="section-title">
-
-        <div class="section-label">Student Resources</div>
-
-        <h2>Everything Students Need</h2>
-
-        <p>
-            Useful educational information and resources
-            designed to help Ethiopian students move forward.
-        </p>
-
-    </div>
-
-
-    <div class="cards">
-
-        <div class="card">
-            <div class="icon">🎓</div>
-            <h3>Scholarships</h3>
-            <p>
-                Discover scholarship opportunities,
-                funding information and educational support.
-            </p>
-            <a href="#support" class="card-link">Learn More →</a>
-        </div>
-
-
-        <div class="card">
-            <div class="icon">🏫</div>
-            <h3>University Admissions</h3>
-            <p>
-                Find useful information about university
-                admissions, applications and registration.
-            </p>
-            <a href="#updates" class="card-link">View Updates →</a>
-        </div>
-
-
-        <div class="card">
-            <div class="icon">📖</div>
-            <h3>Study Materials</h3>
-            <p>
-                Access learning materials, guides and
-                resources to support your studies.
-            </p>
-            <a href="#resources" class="card-link">Explore →</a>
-        </div>
-
-
-        <div class="card">
-            <div class="icon">📝</div>
-            <h3>Exam Information</h3>
-            <p>
-                Stay informed about examinations,
-                registration, schedules and results.
-            </p>
-            <a href="#exams" class="card-link">View Exams →</a>
-        </div>
-[10/4/2026 8:03 AM] Ashenafi Kusse: <div class="card">
-            <div class="icon">📢</div>
-            <h3>Announcements</h3>
-            <p>
-                Get important educational announcements
-                and student-related information.
-            </p>
-            <a href="#updates" class="card-link">Latest News →</a>
-        </div>
-
-
-        <div class="card">
-            <div class="icon">💡</div>
-            <h3>Learning Tips</h3>
-            <p>
-                Improve your study habits with useful
-                learning techniques and practical tips.
-            </p>
-            <a href="#support" class="card-link">Get Help →</a>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     LATEST UPDATES
-========================== -->
-
-<section class="updates-section" id="updates">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <div class="section-label">Stay Informed</div>
-
-            <h2>Latest Education Updates</h2>
-
-            <p>
-                Important information for Ethiopian students
-                in one place.
-            </p>
-
-        </div>
-
-
-        <div class="updates">
-
-            <div class="featured-update">
-
-                <div class="update-icon">📢</div>
-
-                <h3>Education News & Announcements</h3>
-
-                <p>
-                    Follow Student Ethiopia for important
-                    announcements about examinations,
-                    university admissions, scholarships,
-                    registration deadlines and other
-                    student opportunities.
-                </p>
-
-                <br>
-
-                <a href="https://t.me/ministry2"
-                   target="_blank"
-                   class="btn btn-telegram">
-                    📲 Get Updates on Telegram
-                </a>
-
-            </div>
-
-
-            <div class="update-list">
-
-                <div class="update-item">
-                    <span>EDUCATION</span>
-                    <h4>University Admission Updates</h4>
-                </div>
-
-                <div class="update-item">
-                    <span>EXAM</span>
-                    <h4>National Examination Information</h4>
-                </div>
-
-                <div class="update-item">
-                    <span>SCHOLARSHIP</span>
-                    <h4>Scholarship Opportunities</h4>
-                </div>
-
-                <div class="update-item">
-                    <span>ANNOUNCEMENT</span>
-                    <h4>Important Student Announcements</h4>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     EXAMS
-========================== -->
-
-<section class="exam-section" id="exams">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <div class="section-label">Examinations</div>
-
-            <h2>Exam Information</h2>
-
-            <p>
-                Find important examination information,
-                schedules, registration and results updates.
-            </p>
-
-        </div>
-
-
-        <div class="exam-grid">
-
-            <div class="exam-card">
-                <div class="exam-icon">📘</div>
-                <h3>Grade 8</h3>
-                <p>Exam information and results updates.</p>
-            </div>
-
-            <div class="exam-card">
-                <div class="exam-icon">📕</div>
-                <h3>Grade 12</h3>
-                <p>National examination information.</p>
-            </div>
-
-            <div class="exam-card">
-                <div class="exam-icon">🎯</div>
-                <h3>Remedial</h3>
-                <p>Remedial examination announcements.</p>
-            </div>
-
-            <div class="exam-card">
-                <div class="exam-icon">🎓</div>
-                <h3>University</h3>
-                <p>University examination updates.</p>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     REQUIREMENTS
-========================== -->
-
-<section class="requirements-section" id="requirements">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <div class="section-label">Student Support</div>
-
-            <h2>Tell Us What You Need</h2>
-
-            <p>
-                Send your educational question or request
-                to the Student Ethiopia team.
-            </p>
-
-        </div>
-
-
-        <div class="form-container">
-
-            <h3>🎓 Submit Your Requirement</h3>
-
-            <p class="intro">
-                Complete the form below and send your request.
-            </p>
-
-
-            <form
-                action="https://formsubmit.co/studentethiopiabot@gmail.com"
-                method="POST">
-
-                <input
-                    type="hidden"
-                    name="_subject"
-                    value="New Student Requirement - Student Ethiopia">
-
-                <input
-                    type="hidden"
-                    name="_template"
-                    value="table">
-
-                <input
-                    type="hidden"
-                    name="_captcha"
-                    value="false">
-
-                <input
-                    type="hidden"
-                    name="_next"
-                    value="https://nexoramedia0345-ui.github.io/student-ethiopia-website/">
-
-
-                <div class="form-group">
-
-                    <label for="fullname">
-                        Full Name *
-                    </label>
-
-                    <input
-                        type="text"
-                        id="fullname"
-                        name="Full Name"
-                        placeholder="Enter your full name"
-                        required>
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="email">
-                        Email Address *
-                    </label>
-
-                    <input
-                        type="email"
-                        id="email"
-                        name="Email"
-                        placeholder="example@gmail.com"
-                        required>
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="phone">
-                        Phone Number
-                    </label>
-
-                    <input
-                        type="tel"
-                        id="phone"
-                        name="Phone Number"
-                        placeholder="+251 9XX XXX XXX">
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="education">
-                        Education Level *
-                    </label>
-
-                    <select
-                        id="education"
-                        name="Education Level"
-                        required>
-
-                        <option value="">
-                            Select your education level
-                        </option>
-
-                        <option value="Grade 8">
-                            Grade 8
-                        </option>
-
-                        <option value="Grade 12">
-                            Grade 12
-                        </option>
-
-                        <option value="University Student">
-                            University Student
-                        </option>
-
-                        <option value="College Student">
-                            College Student
-                        </option>
-
-                        <option value="TVET Student">
-                            TVET Student
-                        </option>
-
-                        <option value="Other">
-                            Other
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="field">
-                        Field of Study
-                    </label>
-
-                    <input
-                        type="text"
-                        id="field"
-                        name="Field of Study"
-                        placeholder="Example: Computer Science">
-
-                </div>
-[10/4/2026 8:03 AM] Ashenafi Kusse: <div class="form-group">
-
-                    <label for="city">
-                        City
-                    </label>
-
-                    <input
-                        type="text"
-                        id="city"
-                        name="City"
-                        placeholder="Example: Addis Ababa">
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="requirement">
-                        What do you need? *
-                    </label>
-
-                    <textarea
-                        id="requirement"
-                        name="Student Requirement"
-                        placeholder="Write what information or support you need..."
-                        required></textarea>
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="message">
-                        Additional Information
-                    </label>
-
-                    <textarea
-                        id="message"
-                        name="Additional Information"
-                        placeholder="Add any additional information here..."></textarea>
-
-                </div>
-
-
-                <button
-                    type="submit"
-                    class="submit-btn">
-
-                    📩 Submit Requirement
-
-                </button>
-
-            </form>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     AI ASSISTANT
-========================== -->
-
-<section class="ai-section">
-
-    <div class="container">
-
-        <div class="ai-box">
-
-            <div class="ai-icon">
-                🤖
-            </div>
-
-            <h2>AI Student Assistant</h2>
-
-            <p>
-                Our AI-powered student assistant will help
-                students find educational information,
-                understand learning topics and get useful
-                guidance.
-            </p>
-
-            <span class="coming-soon">
-                Coming Soon 🚀
-            </span>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     TELEGRAM
-========================== -->
-
-<section class="telegram-section">
-
-    <div class="container">
-
-        <h2>📲 Join Student Ethiopia</h2>
-
-        <p>
-            Get the latest educational news, examination
-            information, opportunities and important
-            announcements directly on Telegram.
+            Your educational platform for scholarships,
+            university admissions, study materials,
+            examinations and student opportunities.
         </p>
 
         <a
-            href="https://t.me/ministry2"
-            target="_blank"
-            class="btn btn-primary">
-
-            Join @ministry2
-
+            href="#resources"
+            class="button">
+            Explore Resources
         </a>
 
-    </div>
-
-</section>
+    </section>
 
 
-<!-- =========================
-     SUPPORT
-========================== -->
+    <!-- RESOURCES -->
+    <section class="container" id="resources">
 
-<section class="container" id="support">
+        <div class="title">
 
-    <div class="support-box">
-
-        <h2>💬 Student Support</h2>
-
-        <p>
-            Need help or have a question?
-        </p>
-
-        <p>
-            Telegram:
-            <a
-                href="https://t.me/studentethiopiabot_support"
-                target="_blank">
-                @studentethiopiabot_support
-            </a>
-        </p>
-
-        <p>
-            Email:
-            <a
-                href="mailto:studentethiopiabot@gmail.com">
-                studentethiopiabot@gmail.com
-            </a>
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     FOOTER
-========================== -->
-
-<footer>
-
-    <div class="footer-content">
-
-        <div class="footer-brand">
-
-            <h3>🎓 Student Ethiopia</h3>
+            <h2>📚 Student Resources</h2>
 
             <p>
-                Empowering Ethiopian students with
-                education, information and opportunities.
+                Useful educational information
+                for Ethiopian students.
             </p>
 
         </div>
 
 
-        <div class="footer-links">
+        <div class="cards">
 
-            <h4>Quick Links</h4>
+            <div class="card">
 
-            <a href="#home">Home</a>
-            <a href="#resources">Resources</a>
-            <a href="#updates">Updates</a>
-            <a href="#exams">Exams</a>
+                <div class="icon">🎓</div>
+
+                <h3>Scholarships</h3>
+
+                <p>
+                    Find scholarship opportunities
+                    and educational funding information.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">🏫</div>
+
+                <h3>University Admissions</h3>
+
+                <p>
+                    Information about university
+                    admissions and registration.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">📖</div>
+
+                <h3>Study Materials</h3>
+
+                <p>
+                    Learning materials, guides
+                    and educational resources.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">📝</div>
+
+                <h3>Exam Information</h3>
+
+                <p>
+                    Important information about
+                    examinations and results.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">📢</div>
+
+                <h3>Announcements</h3>
+
+                <p>
+                    Stay updated with important
+                    educational announcements.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">💡</div>
+
+                <h3>Learning Tips</h3>
+
+                <p>
+                    Useful study techniques
+                    and learning strategies.
+                </p>
+
+            </div>
 
         </div>
 
+    </section>
 
-        <div class="footer-links">
 
-            <h4>Connect</h4>
+    <!-- TELEGRAM -->
+    <section class="telegram" id="telegram">
 
-            <a href="https://t.me/ministry2"
-               target="_blank">
-                Telegram
-            </a>
+        <div class="container">
 
-            <a href="#support">
-                Student Support
-            </a>
+            <h2>📲 Join Our Telegram Channel</h2>
 
-            <a href="mailto:studentethiopiabot@gmail.com">
-                Email Us
+            <p>
+                Get the latest educational news,
+                examination information, opportunities
+                and important announcements.
+            </p>
+
+            <a
+                href="https://t.me/ministry2"
+                target="_blank"
+                class="button">
+
+                Join @ministry2
+
             </a>
 
         </div>
 
-    </div>
+    </section>
 
 
-    <div class="copyright">
+    <!-- FOOTER -->
+    <footer>
 
-        © 2026 Student Ethiopia · Education • Technology • Opportunities
-        <br>
-        Empowering Ethiopian Students 🇪🇹
+        <p>
+            © 2026 Student Ethiopia
+        </p>
 
-    </div>
+        <p>
+            Education • Technology • Opportunities 🇪🇹
+        </p>
 
-</footer>
-
-
-<!-- =========================
-     MOBILE MENU SCRIPT
-========================== -->
-
-<script>
-
-function toggleMenu() {
-
-    const nav = document.getElementById("mainNav");
-
-    nav.classList.toggle("active");
-
-}
-
-
-// Close mobile menu after clicking a link
-
-document.querySelectorAll("#mainNav a").forEach(function(link) {
-
-    link.addEventListener("click", function() {
-
-        document.getElementById("mainNav")
-            .classList.remove("active");
-
-    });
-
-});
-
-</script>
+    </footer>
 
 </body>
 </html>
